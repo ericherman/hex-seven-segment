@@ -1,0 +1,36 @@
+#		  A
+#		 F B
+#		  G
+#		 E C
+#		  D  p
+
+H	dcba	ABCDEFG
+0	0000	1111110
+1	0001	0110000
+2	0010	1101101
+3	0011	1111001
+4	0100	0110011
+5	0101	1011011
+6	0110	1011111
+7	0111	1110000
+8	1000	1111111
+9	1001	1111011
+A	1010	1110111
+b	1011	0011111
+C	1100	1001110
+d	1101	0111101
+E	1110	1001111
+F	1111	1000111
+
+
+######################################
+A: (!c !a) or (!d  b) or (c  b) or (d !a) or (!d c a) or (d !c !b)
+B: (!d !c) or (!c !a) or (!d !b !a) or (!d b a) or (d !b a)
+C: (!d !b) or (!d  a) or (!b a) or (!d c) or (d !c)
+D: ( d !b) or (!d !c !a) or (!c b a) or (c !b a) or (c b !a)
+E: (!c !a) or ( b !a) or (d  b) or (d c)
+F: (!b !a) or ( c !a) or (d !c) or (d b) or (!d c !b)
+G: (!c  b) or ( b !a) or (d !c) or (d a) or (!d c !b)
+
+######################################
+https://circuitverse.org/users/33230/projects/hex-seven-segment
