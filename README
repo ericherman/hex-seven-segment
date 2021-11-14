@@ -1,27 +1,45 @@
+#######################################
+# The seven segment LED has 8 LEDs
+# labeled A-G and 'p' for the point
+# given 4 bits of data on wires
+# where wire 'a' is 2^0, wire 'b'
+# is 2^1, wire 'c' is 2^2, wire 'd'
+# is 2^3, we wish to illuminate the
+# seven segment LED to look like the
+# numerals 0-9,A,b,C,d,E,F
+
+#  _       _   _       _   _   _
+# | |   |  _|  _| |_| |_  |_    |
+# |_|   | |_   _|   |  _| |_|   |
+#
+#  _   _   _       _       _   _
+# |_| |_| |_| |_  |    _| |_  |_
+# |_|  _| | | |_| |_  |_| |_  |
+#
+
 #		  A
 #		 F B
 #		  G
 #		 E C
 #		  D  p
 
-H	dcba	ABCDEFG
-0	0000	1111110
-1	0001	0110000
-2	0010	1101101
-3	0011	1111001
-4	0100	0110011
-5	0101	1011011
-6	0110	1011111
-7	0111	1110000
-8	1000	1111111
-9	1001	1111011
-A	1010	1110111
-b	1011	0011111
-C	1100	1001110
-d	1101	0111101
-E	1110	1001111
-F	1111	1000111
-
+Hex	dcba	ABCDEFGp
+0	0000	11111100
+1	0001	01100000
+2	0010	11011010
+3	0011	11110010
+4	0100	01100110
+5	0101	10110110
+6	0110	10111110
+7	0111	11100000
+8	1000	11111110
+9	1001	11110110
+A	1010	11101110
+b	1011	00111110
+C	1100	10011100
+d	1101	01111010
+E	1110	10011110
+F	1111	10001110
 
 ######################################
 A: (!c !a) or (!d  b) or (c  b) or (d !a) or (!d c a) or (d !c !b)
@@ -33,4 +51,12 @@ F: (!b !a) or ( c !a) or (d !c) or (d b) or (!d c !b)
 G: (!c  b) or ( b !a) or (d !c) or (d a) or (!d c !b)
 
 ######################################
+# 2020-08-19 see a simulation working:
 https://circuitverse.org/users/33230/projects/hex-seven-segment
+
+######################################
+# LICENSE: CERN-OHL-S-2.0
+######################################
+CERN Open Hardware Licence Version 2 - Strongly Reciprocal
+https://ohwr.org/cern_ohl_s_v2.txt
+######################################
